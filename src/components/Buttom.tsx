@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import * as React from "react";
+import { Text, View, StyleSheet } from "react-native";
 
 interface Iprops {
   textButom: string;
@@ -19,13 +19,13 @@ const styles = StyleSheet.create({
     paddingRight: 11,
     paddingBottom: 11,
     paddingLeft: 13,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: "#FFFFFF",
     borderRadius: 12,
   },
   buttonText: {
-    fontFamily: 'Avenir',
+    fontFamily: "Avenir",
     fontSize: 14,
-    fontWeight: '800',
-    color: '#5533EA',
+    fontWeight: "800",
+    color: "#5533EA",
   },
 });

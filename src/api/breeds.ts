@@ -1,16 +1,23 @@
-import axios from 'axios';
-import apiClient from './index';
+import axios from "axios";
+import apiClient from "./index";
 
-export const getBreeds = async () => {
-    try {
-      const response = await axios.get('breeds');
-      const breeds = response.data;
-      //console.log('breeds', breeds);
-      return breeds;
-    } catch (error) {
-      console.log(error);
-    } 
-  }
+export const getBreeds = () => {
+  return apiClient
+    .get("/breeds")
+    .then((response) => response.data)
+    .catch((error) => error);
+};
+
+// export const getBreeds = async () => {
+//     try {
+//       const response = await axios.get('breeds');
+//       const breeds = response.data;
+//       //console.log('breeds', breeds);
+//       return breeds;
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   }
 
 //   export const getPromisedBreeds = () => {
 //   axios.get('breeds')

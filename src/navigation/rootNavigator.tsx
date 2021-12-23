@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import * as React from "react";
+import { createStackNavigator } from "@react-navigation/stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 // Icons
-import { SimpleLineIcons } from '@expo/vector-icons'; 
-import { Feather } from '@expo/vector-icons'; 
+import { SimpleLineIcons } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
 
 // Blocks
 
-import Main from '../screens/Main'
-import ChooseCats from '../screens/ChooseCats'
-import FavoriteCats from '../screens/FavoriteCats'
+import Main from "../screens/Main";
+import ChooseCats from "../screens/ChooseCats";
+import FavoriteCats from "../screens/FavoriteCats";
 //
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -38,21 +38,19 @@ const Kate = () => {
 
 export default function RootNavigator() {
   return (
-    <Tab.Navigator screenOptions={({ route }) => ({
-      tabBarIcon: ({ focused, color, size }) => {
-        if (route.name === 'Main') {
-          return (
-            <SimpleLineIcons name="home" size={24} color={color} />
-          );
-        } else if (route.name === 'Favorites Cats') {
-          return (
-            <Feather name="heart" size={24} color={color} />
-          );
-        }
-      },
-      tabBarInactiveTintColor: 'gray',
-      tabBarActiveTintColor: '#5533EA',
-    })}>
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused, color, size }) => {
+          if (route.name === "Main") {
+            return <SimpleLineIcons name="home" size={24} color={color} />;
+          } else if (route.name === "Favorites Cats") {
+            return <Feather name="heart" size={24} color={color} />;
+          }
+        },
+        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: "#5533EA",
+      })}
+    >
       <Tab.Screen
         name="Main"
         component={Kate}

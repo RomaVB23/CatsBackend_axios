@@ -13,11 +13,10 @@ import { styles } from "../styles/styles";
 import { getBreeds } from "../api/breeds";
 // types
 import { Breed } from "../types/breed";
-import { Inavigation } from '../types/iNavigation';
+import { Inavigation } from "../types/iNavigation";
 interface Iprops extends Inavigation {}
 
-
-export default function Main({ navigation}: Iprops) {
+export default function Main({ navigation }: Iprops) {
   const [breeds, setBreeds] = useState<Breed[]>([]);
 
   const loadBreeds = () => {
